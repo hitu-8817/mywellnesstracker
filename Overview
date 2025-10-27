@@ -1,0 +1,6 @@
+This project will have these core parts:
+Database connection (DBConnection.java)
+User model & Health Log model
+DAO classes for database operations
+Login + Signup
+Add & View Health Logs (using JFrame)
