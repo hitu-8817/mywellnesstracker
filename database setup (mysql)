@@ -1,0 +1,21 @@
+CREATE DATABASE mywellnesstracker;
+USE mywellnesstracker;
+
+CREATE TABLE users (
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  email VARCHAR(100),
+  password VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE health_logs (
+  log_id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  date DATE,
+  steps INT,
+  water_intake FLOAT,
+  sleep_hours FLOAT,
+  weight FLOAT,
+  calories INT,
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
